@@ -50,7 +50,7 @@ public class Hooks {
     }
 
 
-    @After(value = "@db", order = 2 )
+    @After(value = "@db", order = 2 ) // after each scenario
     public void tearDownDatabaseConnection(){
         System.out.println("--------> AFTER ANNOTATION: DB CONNECTION CLOSED <------");
     }
@@ -58,7 +58,7 @@ public class Hooks {
 
 
 
-    @BeforeStep
+    @BeforeStep // after each step
     public void setUpStep(){
         System.out.println("===========> BEFORESTEP: TAKING SCREENSHOT <===========");
     }
